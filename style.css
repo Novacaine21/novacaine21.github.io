@@ -1,9 +1,13 @@
 html {
   scroll-behavior: smooth;
 }
+h1, h2, h3, h4, h5, h6{
+	font-family: comfortaa;
+}
 body{
 	padding: 10px;
-	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	margin-bottom: 100px;
+	font-family:Montserrat;
 	color: #141414;
 }
 
@@ -12,37 +16,40 @@ body{
 	display:flex;
 	flex-direction: column;
 	float:left;	
-	width:280px;
+	width:250px;
 	height: 100%;
   	position: fixed;
   	z-index: 1;
   	top: 0;
   	left: 0;
  	overflow-x: hidden;
-	padding: 30px;
+	padding: 20px;
  }
-.right{ 
-	display: block;
-	margin-right: 150px;
-	float:left;
-	margin-left: 300px;
-   	padding-left: 20px;
-}
+
 
 /*Profile*/
 .description{
-	padding-left:10px;
+	padding:10px;	
 }
 .center{
-	text-align:JUSTIFY;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+.logo{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 200px;
+	width:150px;
+	object-fit: cover;
 }
 .links {
 	position: absolute;
-	bottom: 10%;
+	bottom: 5%;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end;
-	 
+	justify-content:flex-end; 
 }
 .links > a{
 	color:#027AB6; 
@@ -59,6 +66,13 @@ a:hover{
 	color:darkblue;
 }
 
+.right{ 
+	display: block;
+	float:left;
+	margin-left: 250px;
+   	padding-left: 20px;
+}
+
 /*Case Studies*/
 .grid-container{
 	display: grid;
@@ -66,39 +80,51 @@ a:hover{
 	grid-gap: 20px;
 }
 .grid-item{
-	height: 200px;
+	height: 300px;
 	padding:20px;
-	
+	box-shadow: 2px 2px 10px 2px #dcdcdc;
+	border-radius: 10px;
 }
 .box1{
-	background-color:lightcoral;
+	background-color: lightblue;
 }
 .box2{
-	background-color: lightblue;
+	background-color:lightpink;
 }
 .box3{
 	background-color: lightgreen;
 }
 .box4{
-	background-color: lightgoldenrodyellow;
+	background-color: lightsalmon;
+}
+.box5{
+	background-color:lightseagreen ;
+}
+.box6{
+	background-color:lightgray;
 }
 .pro-hero{
 	display: grid;
 	grid-template-columns: auto 400px;
-	height:450px;
+	width:60%
 }
 .pro-hero > img{
 	width:700px;
 }
-.pro-hero > .description{
-	background-color:#9DCFE3;
+.pro-intro{
+	padding: 10px;
 }
+
 .sec-break{
 	height:50px;
 }
 
-.footer{
-	padding:30px;
+.ill-box{
+	box-shadow: 2px 2px 10px 2px #dcdcdc;
+	border-radius: 10px;
+}
+.ill-box > img{
+border-radius: 10px;
 }
 /*
 @media screen and (max-width: 800px) {
@@ -108,21 +134,97 @@ a:hover{
   }
 */
 .tooltip {
-  position: relative;
-  display: inline-block;
+	position: relative;
+	display: inline-block;
 }
 /* Tooltip text */
 .tooltip .tooltiptext {
-  visibility: hidden;
-  width: 200px;
-  background-color: white ;
-  color: #fff;
-  text-align: center;
-  padding: 10px 0;
-  position: absolute;
-  z-index: 1;
+	visibility: hidden;
+  	width: 90%;
+	border:2px solid white;
+	border-radius:50px;
+	color: white;
+	text-align: center;
+	padding: 10px 0;
+	margin:auto 0;
+	position: absolute;
+	bottom:25px;
+	z-index: 1;
+	align-content: center;
+}
+.tooltiptext > a{
+	color:white;
+}
+.tooltiptext:hover{
+	background-color: white;
+	color: darkgray;
 }
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
 
+/*About Me*/
+table{
+	width:75%;
+}
+th{
+	text-align: left;
+}
+.flexbox{
+	display: flex;
+}
+.mail{
+	display: inline-block;
+	border: 1px solid grey;
+	border-radius: 5px;
+	width:600px;
+	padding: 20px;
+}
+.details{
+	padding:50px;
+	display: inline-block;
+}
+
+form > label{
+	padding-top: 10px;
+	
+}
+form > input {
+	width : 400px;
+	padding:10px;
+	border: 1px solid grey;
+	margin-bottom:10px;
+	margin-top: 5px;
+	border-radius: 10px;
+}
+form>textarea{
+	width : 400px;
+	padding:10px;
+	border: 1px solid grey;
+	margin-bottom:10px;
+	margin-top: 5px;
+	border-radius: 10px;
+}
+.send{
+	border:2px solid white;
+	border-radius:50px;
+	color: grey;
+	text-align: center;
+	padding: 10px 0;
+	align-content: center;
+}
+.send:hover{
+	color:white;
+	background-color: aqua;
+}
+
+footer{
+	margin : 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+footer > font > a{
+	color: #027Ab6;
+	margin-left: 5px;
+}
